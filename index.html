@@ -3,50 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amaranta Lineas Rojas - Galería</title>
+  <title>Amaranta - Galería</title>
   <style>
     body {
       margin: 0;
-      background-color: #fdf6f6;
+      display: flex;
       font-family: 'Georgia', serif;
-      color: #2c1b1b;
+      background-color: #ffffff;
+      color: #1a1a1a;
+    }
+    nav {
+      width: 220px;
+      background-color: #000000;
+      color: #d4af37;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      position: fixed;
+      height: 100vh;
+    }
+    nav h1 {
+      color: #d4af37;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #d4af37;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    .main {
+      margin-left: 240px;
+      width: calc(100% - 240px);
     }
     header {
       padding: 2rem;
       text-align: center;
-      border-bottom: 1px solid #d68c8c;
+      border-bottom: 1px solid #e0e0e0;
     }
-    h1 {
-      font-size: 2.5rem;
-      margin: 0;
-      color: #a0182e;
-    }
-    p.subtitle {
-      font-style: italic;
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      color: #5e2d2d;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      background: #f5dcdc;
-      padding: 1rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #a0182e;
-      font-weight: bold;
-    }
-    .section {
-      padding: 2rem;
-    }
-    .section h2 {
+    h2 {
       color: #a0182e;
       border-bottom: 1px solid #e6b0b0;
       padding-bottom: 0.5rem;
+    }
+    .section {
+      padding: 2rem;
     }
     .gallery {
       display: grid;
@@ -55,8 +62,8 @@
       margin-top: 1rem;
     }
     .artwork {
-      background-color: #fff9f9;
-      border: 1px solid #eccccc;
+      background-color: #fdfdfd;
+      border: 1px solid #eee;
       border-radius: 10px;
       padding: 1rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -77,21 +84,35 @@
       margin: 0.2rem 0;
       font-size: 0.95rem;
     }
+    .contact {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .contact a {
+      text-decoration: none;
+      padding: 0.8rem 1.2rem;
+      border: 2px solid #d4af37;
+      color: #d4af37;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    .contact a:hover {
+      background-color: #d4af37;
+      color: #000;
+    }
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      color: #815353;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>AMARANTA</h1>
-    <p class="subtitle">Obras originales hechas a mano con amor</p>
-  </header>
-
   <nav>
+    <h1>AMARANTA</h1>
     <a href="#originales">Óleos Originales</a>
     <a href="#interpretaciones">Interpretaciones</a>
     <a href="#colecciones">Colecciones Literarias</a>
@@ -99,62 +120,72 @@
     <a href="#paisajes">Paisajes</a>
     <a href="#retratos">Retratos</a>
     <a href="#abstraccion">Abstracción</a>
+    <div class="contact">
+      <a href="mailto:tu-email@ejemplo.com">Correo</a>
+      <a href="https://instagram.com/amaranta.art" target="_blank">Instagram</a>
+      <a href="https://wa.me/573001112233" target="_blank">WhatsApp</a>
+    </div>
   </nav>
+  <div class="main">
+    <header>
+      <p class="subtitle">Obras originales hechas a mano con amor</p>
+    </header>
 
-  <section class="section" id="originales">
-    <h2>Óleos Originales</h2>
-    <div class="gallery">
-      <!-- obras de óleo original -->
-    </div>
-  </section>
+    <section class="section" id="originales">
+      <h2>Óleos Originales</h2>
+      <div class="gallery">
+        <!-- obras de óleo original -->
+      </div>
+    </section>
 
-  <section class="section" id="interpretaciones">
-    <h2>Interpretaciones en Óleo</h2>
-    <div class="gallery">
-      <!-- obras inspiradas en clásicos -->
-    </div>
-  </section>
+    <section class="section" id="interpretaciones">
+      <h2>Interpretaciones en Óleo</h2>
+      <div class="gallery">
+        <!-- obras inspiradas en clásicos -->
+      </div>
+    </section>
 
-  <section class="section" id="colecciones">
-    <h2>Colecciones Literarias en Acrílico</h2>
-    <p><em>Estas piezas llevan una frase al reverso, un susurro poético o una cita literaria. Cada obra es una interpretación viva de la narrativa que la inspira. Hasta ahora, la trilogía de Trisolaris ha sido fuente para tres composiciones originales.</em></p>
-    <div class="gallery">
-      <!-- piezas literarias -->
-    </div>
-  </section>
+    <section class="section" id="colecciones">
+      <h2>Colecciones Literarias en Acrílico</h2>
+      <p><em>Estas piezas llevan una frase al reverso, un susurro poético o una cita literaria. Cada obra es una interpretación viva de la narrativa que la inspira. Hasta ahora, la trilogía de Trisolaris ha sido fuente para tres composiciones originales.</em></p>
+      <div class="gallery">
+        <!-- piezas literarias -->
+      </div>
+    </section>
 
-  <section class="section" id="acuarelas">
-    <h2>Acuarelas</h2>
-    <p><em>Obras pequeñas nacidas del instante, con palabras escondidas y un sello que arde sutil en los bordes.</em></p>
-    <div class="gallery">
-      <!-- acuarelas -->
-    </div>
-  </section>
+    <section class="section" id="acuarelas">
+      <h2>Acuarelas</h2>
+      <p><em>Obras pequeñas nacidas del instante, con palabras escondidas y un sello que arde sutil en los bordes.</em></p>
+      <div class="gallery">
+        <!-- acuarelas -->
+      </div>
+    </section>
 
-  <section class="section" id="paisajes">
-    <h2>Paisajes</h2>
-    <div class="gallery">
-      <!-- paisajes -->
-    </div>
-  </section>
+    <section class="section" id="paisajes">
+      <h2>Paisajes</h2>
+      <div class="gallery">
+        <!-- paisajes -->
+      </div>
+    </section>
 
-  <section class="section" id="retratos">
-    <h2>Retratos</h2>
-    <div class="gallery">
-      <!-- retratos -->
-    </div>
-  </section>
+    <section class="section" id="retratos">
+      <h2>Retratos</h2>
+      <div class="gallery">
+        <!-- retratos -->
+      </div>
+    </section>
 
-  <section class="section" id="abstraccion">
-    <h2>Abstracción</h2>
-    <div class="gallery">
-      <!-- abstracción -->
-    </div>
-  </section>
+    <section class="section" id="abstraccion">
+      <h2>Abstracción</h2>
+      <div class="gallery">
+        <!-- abstracción -->
+      </div>
+    </section>
 
-  <footer>
-    <p>"Líneas rojas es la colección que las une: donde la mirada se detiene, y lo bello —simplemente— sucede."</p>
-    Contacto: tu-email@ejemplo.com · Instagram: @amaranta.art
-  </footer>
+    <footer>
+      <p>"Líneas rojas es la colección que las une: donde la mirada se detiene, y lo bello —simplemente— sucede."</p>
+      Contacto: tu-email@ejemplo.com · Instagram: @amaranta.art
+    </footer>
+  </div>
 </body>
 </html>
