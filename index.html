@@ -1,158 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Amaranta - Galería</title>
+  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Alice&family=Bahiana&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      display: flex;
-      font-family: 'Georgia', serif;
-      background-color: #ffffff;
-      color: #1a1a1a;
-    }
-    nav {
-      width: 240px;
-      background-color: #000000;
-      color: #d4af37;
-      padding: 2rem 1rem;
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      height: 100vh;
-      transition: transform 0.3s ease;
-      z-index: 1000;
-    }
-    nav.collapsed {
-      transform: translateX(-100%);
-    }
-    .toggle-button {
-      position: fixed;
-      top: 1rem;
-      left: 1rem;
-      background-color: #d4af37;
-      border: none;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      z-index: 1001;
-    }
-    nav h1 {
-      color: #d4af37;
-      font-size: 1.8rem;
-      text-align: center;
-      font-family: 'Alice', serif;
-      margin: 0;
-    }
-    nav .lineas-rojas {
-      font-family: 'Bahiana', cursive;
-      font-size: 1.8rem;
-      text-align: center;
-      color: #a0182e;
-      line-height: 1.2;
-      margin-bottom: 2rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #d4af37;
-      font-weight: bold;
-      margin: 0.5rem 0;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffffff;
-    }
-    .contact {
-      margin-top: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      align-items: center;
-    }
-    .contact a {
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border: 2px solid #d4af37;
-      color: #d4af37;
-      border-radius: 8px;
-      transition: all 0.3s;
-      text-align: center;
-    }
-    .contact a:hover {
-      background-color: #d4af37;
-      color: #000;
-    }
-    .main {
-      margin-left: 240px;
-      width: calc(100% - 240px);
-      transition: margin-left 0.3s ease;
-    }
-    .main.collapsed {
-      margin-left: 0;
-      width: 100%;
-    }
-    header {
-      padding: 2rem;
-      text-align: center;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    header h1 {
-      font-family: 'Alice', serif;
-      font-size: 2.5rem;
-      margin-bottom: 0.2rem;
-    }
-    header .lineas-rojas {
-      font-family: 'Bahiana', cursive;
-      font-size: 2rem;
-      color: #a0182e;
-      margin: 0;
-    }
-    h2 {
-      color: #a0182e;
-      border-bottom: 1px solid #e6b0b0;
-      padding-bottom: 0.5rem;
-    }
-    .section {
-      padding: 2rem;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .artwork {
-      background-color: #fdfdfd;
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    }
-    .artwork img {
-      width: 100%;
-      border-radius: 6px;
-    }
-    .info {
-      margin-top: 0.5rem;
-    }
-    .info h3 {
-      margin: 0.5rem 0 0.2rem;
-      font-size: 1.3rem;
-      color: #a0182e;
-    }
-    .info p {
-      margin: 0.2rem 0;
-      font-size: 0.95rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #555;
-    }
-  </style>
 </head>
 <body>
   <button class="toggle-button" onclick="toggleMenu()">☰</button>
@@ -172,6 +25,7 @@
       <a href="https://wa.me/573001112233" target="_blank">WhatsApp</a>
     </div>
   </nav>
+
   <div class="main" id="main">
     <header>
       <h1>Amaranta</h1>
@@ -179,20 +33,25 @@
       <p class="subtitle">Obras originales hechas a mano con amor</p>
     </header>
 
-    <!-- secciones (idénticas a las que ya tenías) -->
-    <!-- ... (sin cambios) -->
+    <!-- Secciones -->
+    <section class="section" id="originales"><h2>Óleos Originales</h2><div class="gallery"></div></section>
+    <section class="section" id="interpretaciones"><h2>Interpretaciones en Óleo</h2><div class="gallery"></div></section>
+    <section class="section" id="colecciones">
+      <h2>Colecciones Literarias en Acrílico</h2>
+      <p><em>Estas piezas llevan una frase al reverso, un susurro poético o una cita literaria...</em></p>
+      <div class="gallery"></div>
+    </section>
+    <section class="section" id="acuarelas"><h2>Acuarelas</h2><div class="gallery"></div></section>
+    <section class="section" id="paisajes"><h2>Paisajes</h2><div class="gallery"></div></section>
+    <section class="section" id="retratos"><h2>Retratos</h2><div class="gallery"></div></section>
+    <section class="section" id="abstraccion"><h2>Abstracción</h2><div class="gallery"></div></section>
 
     <footer>
       <p>"Líneas rojas es la colección que las une: donde la mirada se detiene, y lo bello —simplemente— sucede."</p>
-      Contacto: tu-email@ejemplo.com · Instagram: @amaranta.lieas.rojas
+      Contacto: tu-email@ejemplo.com · Instagram: @amaranta.art
     </footer>
   </div>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('sidebar').classList.toggle('collapsed');
-      document.getElementById('main').classList.toggle('collapsed');
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
