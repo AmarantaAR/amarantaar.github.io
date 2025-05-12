@@ -27,11 +27,32 @@
       margin-top: 0.5rem;
       color: #5e2d2d;
     }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      background: #f5dcdc;
+      padding: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #a0182e;
+      font-weight: bold;
+    }
+    .section {
+      padding: 2rem;
+    }
+    .section h2 {
+      color: #a0182e;
+      border-bottom: 1px solid #e6b0b0;
+      padding-bottom: 0.5rem;
+    }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
-      padding: 2rem;
+      margin-top: 1rem;
     }
     .artwork {
       background-color: #fff9f9;
@@ -47,7 +68,7 @@
     .info {
       margin-top: 0.5rem;
     }
-    .info h2 {
+    .info h3 {
       margin: 0.5rem 0 0.2rem;
       font-size: 1.3rem;
       color: #a0182e;
@@ -70,30 +91,69 @@
     <p class="subtitle">Obras originales hechas a mano con amor</p>
   </header>
 
-  <section class="gallery">
-    <div class="artwork">
-      <img src="ruta/a/tu-cuadro1.jpg" alt="Título del Cuadro 1">
-      <div class="info">
-        <h2>Líneas Rojas</h2>
-        <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
-        <p><strong>Dimensiones:</strong> 50x70 cm</p>
-        <p><strong>Año:</strong> 2024</p>
-      </div>
-    </div>
+  <nav>
+    <a href="#originales">Óleos Originales</a>
+    <a href="#interpretaciones">Interpretaciones</a>
+    <a href="#colecciones">Colecciones Literarias</a>
+    <a href="#acuarelas">Acuarelas</a>
+    <a href="#paisajes">Paisajes</a>
+    <a href="#retratos">Retratos</a>
+    <a href="#abstraccion">Abstracción</a>
+  </nav>
 
-    <!-- Puedes copiar este bloque para cada nueva obra -->
-    <div class="artwork">
-      <img src="ruta/a/tu-cuadro2.jpg" alt="Título del Cuadro 2">
-      <div class="info">
-        <h2>Nombre del Cuadro</h2>
-        <p><strong>Técnica:</strong> Técnica mixta</p>
-        <p><strong>Dimensiones:</strong> 30x40 cm</p>
-        <p><strong>Año:</strong> 2023</p>
-      </div>
+  <section class="section" id="originales">
+    <h2>Óleos Originales</h2>
+    <div class="gallery">
+      <!-- obras de óleo original -->
+    </div>
+  </section>
+
+  <section class="section" id="interpretaciones">
+    <h2>Interpretaciones en Óleo</h2>
+    <div class="gallery">
+      <!-- obras inspiradas en clásicos -->
+    </div>
+  </section>
+
+  <section class="section" id="colecciones">
+    <h2>Colecciones Literarias en Acrílico</h2>
+    <p><em>Estas piezas llevan una frase al reverso, un susurro poético o una cita literaria. Cada obra es una interpretación viva de la narrativa que la inspira. Hasta ahora, la trilogía de Trisolaris ha sido fuente para tres composiciones originales.</em></p>
+    <div class="gallery">
+      <!-- piezas literarias -->
+    </div>
+  </section>
+
+  <section class="section" id="acuarelas">
+    <h2>Acuarelas</h2>
+    <p><em>Obras pequeñas nacidas del instante, con palabras escondidas y un sello que arde sutil en los bordes.</em></p>
+    <div class="gallery">
+      <!-- acuarelas -->
+    </div>
+  </section>
+
+  <section class="section" id="paisajes">
+    <h2>Paisajes</h2>
+    <div class="gallery">
+      <!-- paisajes -->
+    </div>
+  </section>
+
+  <section class="section" id="retratos">
+    <h2>Retratos</h2>
+    <div class="gallery">
+      <!-- retratos -->
+    </div>
+  </section>
+
+  <section class="section" id="abstraccion">
+    <h2>Abstracción</h2>
+    <div class="gallery">
+      <!-- abstracción -->
     </div>
   </section>
 
   <footer>
+    <p>"Líneas rojas es la colección que las une: donde la mirada se detiene, y lo bello —simplemente— sucede."</p>
     Contacto: tu-email@ejemplo.com · Instagram: @amaranta.art
   </footer>
 </body>
