@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amaranta - Galería</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #fdf6f6;
+      font-family: 'Georgia', serif;
+      color: #2c1b1b;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 1px solid #d68c8c;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #a0182e;
+    }
+    p.subtitle {
+      font-style: italic;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #5e2d2d;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .artwork {
+      background-color: #fff9f9;
+      border: 1px solid #eccccc;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    .artwork img {
+      width: 100%;
+      border-radius: 6px;
+    }
+    .info {
+      margin-top: 0.5rem;
+    }
+    .info h2 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: 1.3rem;
+      color: #a0182e;
+    }
+    .info p {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #815353;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AMARANTA</h1>
+    <p class="subtitle">Obras originales hechas a mano con amor</p>
+  </header>
+
+  <section class="gallery">
+    <div class="artwork">
+      <img src="ruta/a/tu-cuadro1.jpg" alt="Título del Cuadro 1">
+      <div class="info">
+        <h2>Líneas Rojas</h2>
+        <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
+        <p><strong>Dimensiones:</strong> 50x70 cm</p>
+        <p><strong>Año:</strong> 2024</p>
+      </div>
+    </div>
+
+    <!-- Puedes copiar este bloque para cada nueva obra -->
+    <div class="artwork">
+      <img src="ruta/a/tu-cuadro2.jpg" alt="Título del Cuadro 2">
+      <div class="info">
+        <h2>Nombre del Cuadro</h2>
+        <p><strong>Técnica:</strong> Técnica mixta</p>
+        <p><strong>Dimensiones:</strong> 30x40 cm</p>
+        <p><strong>Año:</strong> 2023</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Contacto: tu-email@ejemplo.com · Instagram: @amaranta.art
+  </footer>
+</body>
+</html>
