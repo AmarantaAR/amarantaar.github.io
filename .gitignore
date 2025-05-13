@@ -1,4 +1,4 @@
-env.json
+dev.env.json
 agekey.txt
 .sops.yaml
 sops*

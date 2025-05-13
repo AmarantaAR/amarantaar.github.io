@@ -12,19 +12,17 @@ jobs:
     - name: Clonar el repositorio
       uses: actions/checkout@v3
 
-    - name: Instalar Node (para servir si lo necesitas)
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-
     - name: Crear env.json con secreto
       run: |
-        echo "{ \"GOOGLE_SCRIPT_URL\": \"${{ secrets.GOOGLE_SCRIPT_URL }}\" }" > public/env.json
-        ls public
-        cat public/env.json
-    
+        echo "{ \"GOOGLE_SCRIPT_URL\": \"${{ secrets.GOOGLE_SCRIPT_URL }}\" }" > env.json
 
-    - name: Subir a GitHub Pages
+    - name: Verificar archivos
+      run: |
+        echo "🗂 Archivos en la raíz:"
+        ls -la
+
+    - name: Deploy a GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        personal_token: ${{ secrets.PERSONAL_TOKEN}}
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
+        publish_dir: .
