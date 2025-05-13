@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
   <button class="toggle-button" onclick="toggleMenu()">☰</button>
   <nav id="sidebar">
@@ -45,37 +47,66 @@
     <section class="section" id="originales">
       <h2>Óleos Originales</h2>
       <div class="gallery">
-        <div class="artwork" onclick="openModal('Luz Silenciosa', 'Óleo sobre lienzo, 60x80 cm. Inspirada en la calma de los atardeceres de tierra fría.', 'https://via.placeholder.com/400x300')">
-          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.7KF3aMmFjs9Tvvea8RTvggHaGF%26cb%3Diwc2%26pid%3DApi&f=1&ipt=4a40268b3c46f6a6b0d78891b8f3499e080ed6e673e4f89a99031235a608b704&ipo=images" alt="Luz Silenciosa">
+        <div class="artwork" onclick="openModal(
+            'Título de la Obra',
+            'Descripción corta de la obra.',
+            ['assets/patio.png', 'assets/patio.png', 'assets/patio.png'])">
+          <img src="assets/patio.png" alt="Título de la Obra">
           <div class="info">
-            <h3>Luz Silenciosa</h3>
-            <p>Óleo sobre lienzo</p>
+            <h3>Título de la Obra</h3>
+            <p>Técnica usada</p>
           </div>
         </div>
-        <div class="artwork" onclick="openModal('Rastro de fuego', 'Óleo sobre lienzo, 50x70 cm. Tonos intensos y cálidos que evocan la pasión contenida.', 'https://via.placeholder.com/400x300/8e3b46/ffffff')">
-          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.cdTu_Thji43qQlvD29Ny_QHaHa%26cb%3Diwc2%26pid%3DApi&f=1&ipt=a08eecaa08b32ec75a5ba559de3129620ee3cac7f4f23204c65bdef333e6016c&ipo=images" alt="Rastro de fuego">
+
+        <div class="artwork"
+          onclick="openModal('Rastro de fuego', 'Óleo sobre lienzo, 50x70 cm. Tonos intensos y cálidos que evocan la pasión contenida.', 'https://via.placeholder.com/400x300/8e3b46/ffffff')">
+          <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.cdTu_Thji43qQlvD29Ny_QHaHa%26cb%3Diwc2%26pid%3DApi&f=1&ipt=a08eecaa08b32ec75a5ba559de3129620ee3cac7f4f23204c65bdef333e6016c&ipo=images"
+            alt="Rastro de fuego">
           <div class="info">
             <h3>Rastro de fuego</h3>
             <p>Óleo sobre lienzo</p>
           </div>
         </div>
-        <div class="artwork" onclick="openModal('Cielo fractal', 'Óleo sobre lienzo, 60x60 cm. Una visión abstracta de un firmamento dividido.', 'https://via.placeholder.com/400x300/3b3f8e/ffffff')">
-          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.JtSro0igJ8_FF-a0dR2J0AHaHa%26cb%3Diwp2%26pid%3DApi&f=1&ipt=8306eab4d1664961f87954a593ce102a5b47897c8421db62c684762b0546646b&ipo=images" alt="Verde">
+        <div class="artwork"
+          onclick="openModal('Cielo fractal', 'Óleo sobre lienzo, 60x60 cm. Una visión abstracta de un firmamento dividido.', 'https://via.placeholder.com/400x300/3b3f8e/ffffff')">
+          <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.JtSro0igJ8_FF-a0dR2J0AHaHa%26cb%3Diwp2%26pid%3DApi&f=1&ipt=8306eab4d1664961f87954a593ce102a5b47897c8421db62c684762b0546646b&ipo=images"
+            alt="Verde">
           <div class="info">
             <h3>Cielo fractal</h3>
             <p>Óleo sobre lienzo</p>
           </div>
         </div>
-      </div> 
+      </div>
     </section>
 
     <!-- Secciones futuras -->
-    <section class="section" id="interpretaciones"><h2>Interpretaciones en Óleo</h2><div class="gallery"></div></section>
-    <section class="section" id="colecciones"><h2>Colecciones Literarias en Acrílico</h2><p><em>Estas piezas llevan una frase al reverso, un susurro poético o una cita literaria...</em></p><div class="gallery"></div></section>
-    <section class="section" id="acuarelas"><h2>Acuarelas</h2><div class="gallery"></div></section>
-    <section class="section" id="paisajes"><h2>Paisajes</h2><div class="gallery"></div></section>
-    <section class="section" id="retratos"><h2>Retratos</h2><div class="gallery"></div></section>
-    <section class="section" id="abstraccion"><h2>Abstracción</h2><div class="gallery"></div></section>
+    <section class="section" id="interpretaciones">
+      <h2>Interpretaciones en Óleo</h2>
+      <div class="gallery"></div>
+    </section>
+    <section class="section" id="colecciones">
+      <h2>Colecciones Literarias en Acrílico</h2>
+      <p><em>Estas piezas llevan una frase al reverso, un susurro poético o una cita literaria...</em></p>
+      <div class="gallery"></div>
+    </section>
+    <section class="section" id="acuarelas">
+      <h2>Acuarelas</h2>
+      <div class="gallery"></div>
+    </section>
+    <section class="section" id="paisajes">
+      <h2>Paisajes</h2>
+      <div class="gallery"></div>
+    </section>
+    <section class="section" id="retratos">
+      <h2>Retratos</h2>
+      <div class="gallery"></div>
+    </section>
+    <section class="section" id="abstraccion">
+      <h2>Abstracción</h2>
+      <div class="gallery"></div>
+    </section>
 
     <footer>
       <p>"Líneas rojas es la colección que las une: donde la mirada se detiene, y lo bello —simplemente— sucede."</p>
@@ -86,7 +117,7 @@
   <div id="modal" class="modal" onclick="closeModal(event)">
     <div class="modal-content">
       <span class="modal-close" onclick="closeModal(event)">&times;</span>
-      <img id="modal-image" src="" alt="" style="width:100%; border-radius:6px; margin-bottom:1rem;"/>
+      <img id="modal-image" src="" alt="" style="width:100%; border-radius:6px; margin-bottom:1rem;" />
       <h3 id="modal-title"></h3>
       <p id="modal-description"></p>
       <form id="purchase-form">
@@ -99,4 +130,5 @@
     </div>
   </div>
 </body>
+
 </html>
