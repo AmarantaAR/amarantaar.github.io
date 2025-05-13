@@ -5,12 +5,64 @@ function toggleMenu() {
   document.getElementById('main').classList.toggle('collapsed');
 }
 
-function openModal(title, description, imageUrl) {
-  document.getElementById('modal').style.display = 'flex';
+// function openModal(title, description, imageUrl) {
+//   document.getElementById('modal').style.display = 'flex';
+//   document.getElementById('modal-title').innerText = title;
+//   document.getElementById('modal-description').innerText = description;
+//   document.getElementById('modal-image').src = imageUrl;
+//   document.getElementById('purchase-form').dataset.artTitle = title;
+// }
+
+function openModal(title, description, images) {
   document.getElementById('modal-title').innerText = title;
   document.getElementById('modal-description').innerText = description;
-  document.getElementById('modal-image').src = imageUrl;
-  document.getElementById('purchase-form').dataset.artTitle = title;
+
+  const modalContent = document.querySelector('.modal-content');
+
+  // Crear estructura Swiper para múltiples imágenes
+  modalContent.innerHTML = `
+    <span class="modal-close" onclick="closeModal(event)">&times;</span>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        ${images.map(img => `
+          <div class="swiper-slide">
+            <img src="${img}" class="zoomable-image" style="width:100%; border-radius:6px;" />
+          </div>
+        `).join('')}
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <h3>${title}</h3>
+    <p>${description}</p>
+    <form id="purchase-form">
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="email" name="correo" placeholder="Correo electrónico" required>
+      <input type="text" name="telefono" placeholder="Número de contacto (WhatsApp)" required>
+      <input type="text" name="instagram" placeholder="Instagram (opcional)">
+      <button type="submit">Solicitar compra</button>
+    </form>
+  `;
+
+  // Mostrar modal
+  document.getElementById('modal').style.display = 'flex';
+
+  // Inicializar Swiper
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  // Aplicar zoom en imágenes
+  mediumZoom('.zoomable-image');
 }
 
 function closeModal(event) {
@@ -18,6 +70,7 @@ function closeModal(event) {
     document.getElementById('modal').style.display = 'none';
   }
 }
+
 
 // 🔐 Esta variable será reemplazada automáticamente en build.sh con la URL real
 let GOOGLE_SCRIPT_URL = "__INJECT_GOOGLE_SCRIPT_URL__";
