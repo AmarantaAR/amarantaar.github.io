@@ -5,6 +5,7 @@ body {
     background-color: #ffffff;
     color: #1a1a1a;
   }
+  
   nav {
     width: 240px;
     background-color: #000000;
@@ -17,13 +18,15 @@ body {
     transition: transform 0.3s ease;
     z-index: 1000;
   }
+  
   nav.collapsed {
     transform: translateX(-100%);
   }
+  
   .toggle-button {
     position: fixed;
     top: 1rem;
-    left: 1rem;
+    left: 250px;
     background-color: #d4af37;
     border: none;
     padding: 0.5rem 1rem;
@@ -31,6 +34,7 @@ body {
     cursor: pointer;
     z-index: 1001;
   }
+  
   nav h1 {
     color: #d4af37;
     font-size: 1.8rem;
@@ -38,6 +42,7 @@ body {
     font-family: 'Alice', serif;
     margin: 0;
   }
+  
   nav .lineas-rojas {
     font-family: 'Bahiana', cursive;
     font-size: 1.8rem;
@@ -46,6 +51,7 @@ body {
     line-height: 1.2;
     margin-bottom: 2rem;
   }
+  
   nav a {
     text-decoration: none;
     color: #d4af37;
@@ -53,9 +59,11 @@ body {
     margin: 0.5rem 0;
     transition: color 0.3s;
   }
+  
   nav a:hover {
     color: #ffffff;
   }
+  
   .contact {
     margin-top: 2rem;
     display: flex;
@@ -63,6 +71,7 @@ body {
     gap: 0.5rem;
     align-items: center;
   }
+  
   .contact a {
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -72,75 +81,104 @@ body {
     transition: all 0.3s;
     text-align: center;
   }
+  
   .contact a:hover {
     background-color: #d4af37;
     color: #000;
   }
+  
   .main {
     margin-left: 240px;
     width: calc(100% - 240px);
     transition: margin-left 0.3s ease;
   }
+  
   .main.collapsed {
     margin-left: 0;
     width: 100%;
   }
+  
   header {
-    padding: 2rem;
+    padding: 3rem 2rem 2rem 2rem;
     text-align: center;
     border-bottom: 1px solid #e0e0e0;
   }
+  
   header h1 {
     font-family: 'Alice', serif;
     font-size: 2.5rem;
     margin-bottom: 0.2rem;
   }
+  
   header .lineas-rojas {
     font-family: 'Bahiana', cursive;
     font-size: 2rem;
     color: #a0182e;
     margin: 0;
   }
+  
+  .subtitle {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #5e2d2d;
+  }
+  
   h2 {
     color: #a0182e;
     border-bottom: 1px solid #e6b0b0;
     padding-bottom: 0.5rem;
+    margin-top: 3rem;
   }
+  
   .section {
-    padding: 2rem;
+    padding: 2rem 3rem;
   }
+  
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin-top: 1rem;
   }
+  
   .artwork {
     background-color: #fdfdfd;
     border: 1px solid #eee;
     border-radius: 10px;
     padding: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
   }
+  
+  .artwork:hover {
+    transform: scale(1.02);
+  }
+  
   .artwork img {
     width: 100%;
     border-radius: 6px;
   }
+  
   .info {
     margin-top: 0.5rem;
   }
+  
   .info h3 {
     margin: 0.5rem 0 0.2rem;
     font-size: 1.3rem;
     color: #a0182e;
   }
+  
   .info p {
     margin: 0.2rem 0;
     font-size: 0.95rem;
   }
+  
   footer {
     text-align: center;
     padding: 2rem;
     font-size: 0.9rem;
     color: #555;
   }
+  
