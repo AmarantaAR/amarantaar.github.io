@@ -239,3 +239,23 @@ body {
     margin-top: 1rem;
   }
   
+  .swiper-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #a0182e;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #a0182e;
+  }
+  
