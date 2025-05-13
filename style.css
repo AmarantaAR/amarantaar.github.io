@@ -26,7 +26,7 @@ body {
   .toggle-button {
     position: fixed;
     top: 1rem;
-    left: 1rem;
+    left: 250px;
     background-color: #d4af37;
     border: none;
     padding: 0.5rem 1rem;
@@ -360,3 +360,22 @@ body {
 }
 
   
+@media (max-width: 768px) {
+  .toggle-button {
+    left: 1rem; /* posición del botón solo en móviles */
+    top: 1rem;
+  }
+  
+  nav {
+    transform: translateX(-100%);
+  }
+
+  nav.collapsed {
+    transform: translateX(0%);
+  }
+
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
