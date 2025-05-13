@@ -6,37 +6,7 @@
   <title>Amaranta - Galería</title>
   <link href="https://fonts.googleapis.com/css2?family=Alice&family=Bahiana&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      left: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-    }
-    .modal-content {
-      background-color: white;
-      padding: 2rem;
-      max-width: 600px;
-      width: 90%;
-      border-radius: 10px;
-      position: relative;
-    }
-    .modal-close {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: #a0182e;
-    }
-  </style>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <button class="toggle-button" onclick="toggleMenu()">☰</button>
@@ -74,10 +44,24 @@
             <p>Óleo sobre lienzo</p>
           </div>
         </div>
+        <div class="artwork" onclick="openModal('Rastro de fuego', 'Óleo sobre lienzo, 50x70 cm. Tonos intensos y cálidos que evocan la pasión contenida.', 'https://via.placeholder.com/400x300/8e3b46/ffffff')">
+          <img src="https://via.placeholder.com/400x300/8e3b46/ffffff" alt="Rastro de fuego">
+          <div class="info">
+            <h3>Rastro de fuego</h3>
+            <p>Óleo sobre lienzo</p>
+          </div>
+        </div>
+        <div class="artwork" onclick="openModal('Cielo fractal', 'Óleo sobre lienzo, 60x60 cm. Una visión abstracta de un firmamento dividido.', 'https://via.placeholder.com/400x300/3b3f8e/ffffff')">
+          <img src="https://via.placeholder.com/400x300/3b3f8e/ffffff" alt="Cielo fractal">
+          <div class="info">
+            <h3>Cielo fractal</h3>
+            <p>Óleo sobre lienzo</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Secciones vacías conservadas para contenido futuro -->
+    <!-- Secciones futuras -->
     <section class="section" id="interpretaciones"><h2>Interpretaciones en Óleo</h2><div class="gallery"></div></section>
     <section class="section" id="colecciones"><h2>Colecciones Literarias en Acrílico</h2><p><em>Estas piezas llevan una frase al reverso, un susurro poético o una cita literaria...</em></p><div class="gallery"></div></section>
     <section class="section" id="acuarelas"><h2>Acuarelas</h2><div class="gallery"></div></section>
@@ -97,22 +81,14 @@
       <img id="modal-image" src="" alt="" style="width:100%; border-radius:6px; margin-bottom:1rem;"/>
       <h3 id="modal-title"></h3>
       <p id="modal-description"></p>
+      <form id="purchase-form">
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
+        <input type="text" name="telefono" placeholder="Número de contacto (WhatsApp)" required>
+        <input type="text" name="instagram" placeholder="Instagram (opcional)">
+        <button type="submit">Solicitar compra</button>
+      </form>
     </div>
   </div>
-
-  <script src="script.js"></script>
-  <script>
-    function openModal(title, description, imageUrl) {
-      document.getElementById('modal').style.display = 'flex';
-      document.getElementById('modal-title').innerText = title;
-      document.getElementById('modal-description').innerText = description;
-      document.getElementById('modal-image').src = imageUrl;
-    }
-    function closeModal(event) {
-      if (event.target.classList.contains('modal') || event.target.classList.contains('modal-close')) {
-        document.getElementById('modal').style.display = 'none';
-      }
-    }
-  </script>
 </body>
 </html>

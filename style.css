@@ -137,7 +137,7 @@ body {
   
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 1rem;
   }
@@ -149,6 +149,7 @@ body {
     padding: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease;
+    cursor: pointer;
   }
   
   .artwork:hover {
@@ -181,7 +182,8 @@ body {
     font-size: 0.9rem;
     color: #555;
   }
-
+  
+  /* MODAL */
   .modal {
     display: none;
     position: fixed;
@@ -195,6 +197,7 @@ body {
     justify-content: center;
     align-items: center;
   }
+  
   .modal-content {
     background-color: white;
     padding: 2rem;
@@ -203,6 +206,7 @@ body {
     border-radius: 10px;
     position: relative;
   }
+  
   .modal-close {
     position: absolute;
     top: 10px;
@@ -211,9 +215,11 @@ body {
     cursor: pointer;
     color: #a0182e;
   }
+  
   .modal-content form {
     margin-top: 1rem;
   }
+  
   .modal-content input {
     width: 100%;
     padding: 0.5rem;
@@ -221,6 +227,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+  
   .modal-content button {
     background-color: #a0182e;
     color: white;
@@ -231,8 +238,4 @@ body {
     font-weight: bold;
     margin-top: 1rem;
   }
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
+  
