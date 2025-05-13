@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galería Amaranta</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Bahiana&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="sidebar">
-    <h1>Amaranta</h1>
-    <h2 style="font-family: Bahiana; color: crimson; margin-top: 0;">Líneas<br>rojas</h2>
+    <h1 style="font-family: 'Alice', serif;">Amaranta</h1>
+    <h2 style="font-family: 'Bahiana', cursive; color: crimson; margin-top: 0;">Líneas<br>rojas</h2>
     <nav>
       <ul>
         <li><a href="#oleos-originales">Óleos Originales</a></li>
@@ -24,15 +25,18 @@
   </div>
 
   <div id="main">
-    <div class="artwork" onclick="openModal('Obra: Trisolaris', 'Inspirada en El problema de los tres cuerpos', ['trisolaris1.jpg', 'trisolaris2.jpg', 'trisolaris3.jpg'])">
-      <h3>Trisolaris</h3>
-      <div class="artwork-images">
-        <img src="trisolaris1.jpg" alt="Trisolaris 1" onclick="openModal('Obra: Trisolaris', 'Inspirada en El problema de los tres cuerpos', ['trisolaris1.jpg', 'trisolaris2.jpg', 'trisolaris3.jpg'])">
-        <img src="trisolaris2.jpg" alt="Trisolaris 2" onclick="openModal('Obra: Trisolaris', 'Inspirada en El problema de los tres cuerpos', ['trisolaris1.jpg', 'trisolaris2.jpg', 'trisolaris3.jpg'])">
-        <img src="trisolaris3.jpg" alt="Trisolaris 3" onclick="openModal('Obra: Trisolaris', 'Inspirada en El problema de los tres cuerpos', ['trisolaris1.jpg', 'trisolaris2.jpg', 'trisolaris3.jpg'])">
+    <section id="oleos-originales">
+      <h2>Óleos Originales</h2>
+      <div class="artwork" onclick="openModal('Obra: Trisolaris', 'Inspirada en El problema de los tres cuerpos', ['trisolaris1.jpg', 'trisolaris2.jpg', 'trisolaris3.jpg'])">
+        <h3>Trisolaris</h3>
+        <div class="artwork-images">
+          <img src="trisolaris1.jpg" alt="Trisolaris 1" onclick="openModal('Obra: Trisolaris', 'Inspirada en El problema de los tres cuerpos', ['trisolaris1.jpg', 'trisolaris2.jpg', 'trisolaris3.jpg'])">
+          <img src="trisolaris2.jpg" alt="Trisolaris 2" onclick="openModal('Obra: Trisolaris', 'Inspirada en El problema de los tres cuerpos', ['trisolaris1.jpg', 'trisolaris2.jpg', 'trisolaris3.jpg'])">
+          <img src="trisolaris3.jpg" alt="Trisolaris 3" onclick="openModal('Obra: Trisolaris', 'Inspirada en El problema de los tres cuerpos', ['trisolaris1.jpg', 'trisolaris2.jpg', 'trisolaris3.jpg'])">
+        </div>
       </div>
-    </div>
-    <!-- Puedes repetir bloques similares para otras obras -->
+    </section>
+    <!-- Puedes repetir secciones similares para otras categorías -->
   </div>
 
   <div id="modal" class="modal" onclick="closeModal(event)">
