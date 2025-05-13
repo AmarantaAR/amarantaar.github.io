@@ -310,4 +310,29 @@ body {
     cursor: pointer;
     z-index: 10;
   }
+
+  @media (max-width: 768px) {
+    .modal-content {
+      flex-direction: column; /* Una sola columna en móviles */
+      max-height: 95vh;
+      max-width: 95vw;
+    }
+  
+    .modal-gallery, .modal-info {
+      flex: unset;
+      width: 100%;
+      max-height: 50vh;
+    }
+  
+    .modal-info {
+      margin-right: 0; /* quitar margen lateral en móviles */
+      padding: 10px;
+    }
+  
+    .swiper-slide img {
+      object-fit: contain;
+      max-height: 50vh;
+    }
+  }
+  
   
