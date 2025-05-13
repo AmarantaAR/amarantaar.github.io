@@ -21,6 +21,7 @@ jobs:
       run: |
         echo "{ \"GOOGLE_SCRIPT_URL\": \"${{ secrets.GOOGLE_SCRIPT_URL }}\" }" > public/env.json
         ls public
+        cat public/env.json
     
 
     - name: Subir a GitHub Pages
