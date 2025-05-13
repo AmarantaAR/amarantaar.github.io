@@ -6,6 +6,37 @@
   <title>Amaranta - Galería</title>
   <link href="https://fonts.googleapis.com/css2?family=Alice&family=Bahiana&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background-color: white;
+      padding: 2rem;
+      max-width: 600px;
+      width: 90%;
+      border-radius: 10px;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #a0182e;
+    }
+  </style>
 </head>
 <body>
   <button class="toggle-button" onclick="toggleMenu()">☰</button>
@@ -25,6 +56,7 @@
       <a href="https://wa.me/573001112233" target="_blank">WhatsApp</a>
     </div>
   </nav>
+
   <div class="main" id="main">
     <header>
       <h1>Amaranta</h1>
@@ -34,39 +66,24 @@
 
     <section class="section" id="originales">
       <h2>Óleos Originales</h2>
-      <div class="gallery"></div>
+      <div class="gallery">
+        <div class="artwork" onclick="openModal('Luz Silenciosa', 'Óleo sobre lienzo, 60x80 cm. Inspirada en la calma de los atardeceres de tierra fría.', 'https://via.placeholder.com/400x300')">
+          <img src="https://via.placeholder.com/400x300" alt="Luz Silenciosa">
+          <div class="info">
+            <h3>Luz Silenciosa</h3>
+            <p>Óleo sobre lienzo</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="section" id="interpretaciones">
-      <h2>Interpretaciones en Óleo</h2>
-      <div class="gallery"></div>
-    </section>
-
-    <section class="section" id="colecciones">
-      <h2>Colecciones Literarias en Acrílico</h2>
-      <p><em>Estas piezas llevan una frase al reverso, un susurro poético o una cita literaria...</em></p>
-      <div class="gallery"></div>
-    </section>
-
-    <section class="section" id="acuarelas">
-      <h2>Acuarelas</h2>
-      <div class="gallery"></div>
-    </section>
-
-    <section class="section" id="paisajes">
-      <h2>Paisajes</h2>
-      <div class="gallery"></div>
-    </section>
-
-    <section class="section" id="retratos">
-      <h2>Retratos</h2>
-      <div class="gallery"></div>
-    </section>
-
-    <section class="section" id="abstraccion">
-      <h2>Abstracción</h2>
-      <div class="gallery"></div>
-    </section>
+    <!-- Secciones vacías conservadas para contenido futuro -->
+    <section class="section" id="interpretaciones"><h2>Interpretaciones en Óleo</h2><div class="gallery"></div></section>
+    <section class="section" id="colecciones"><h2>Colecciones Literarias en Acrílico</h2><p><em>Estas piezas llevan una frase al reverso, un susurro poético o una cita literaria...</em></p><div class="gallery"></div></section>
+    <section class="section" id="acuarelas"><h2>Acuarelas</h2><div class="gallery"></div></section>
+    <section class="section" id="paisajes"><h2>Paisajes</h2><div class="gallery"></div></section>
+    <section class="section" id="retratos"><h2>Retratos</h2><div class="gallery"></div></section>
+    <section class="section" id="abstraccion"><h2>Abstracción</h2><div class="gallery"></div></section>
 
     <footer>
       <p>"Líneas rojas es la colección que las une: donde la mirada se detiene, y lo bello —simplemente— sucede."</p>
@@ -74,6 +91,28 @@
     </footer>
   </div>
 
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal(event)">&times;</span>
+      <img id="modal-image" src="" alt="" style="width:100%; border-radius:6px; margin-bottom:1rem;"/>
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+  <script>
+    function openModal(title, description, imageUrl) {
+      document.getElementById('modal').style.display = 'flex';
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-description').innerText = description;
+      document.getElementById('modal-image').src = imageUrl;
+    }
+    function closeModal(event) {
+      if (event.target.classList.contains('modal') || event.target.classList.contains('modal-close')) {
+        document.getElementById('modal').style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>
