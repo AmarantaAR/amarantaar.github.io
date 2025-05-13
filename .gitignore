@@ -1,0 +1,4 @@
+env.json
+agekey.txt
+.sops.yaml
+sops*
