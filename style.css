@@ -185,18 +185,20 @@ body {
   
   /* MODAL */
   .modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
+    position: fixed;       /* Siempre fijado en relación con la ventana */
     top: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8);
+    left: 0;
+    width: 100vw;          /* 100% del ancho del viewport */
+    height: 100vh;         /* 100% del alto del viewport */
+    background-color: rgba(0,0,0,0.8);  /* Fondo semi-transparente oscuro */
+    display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2000;         /* Encima de cualquier otro elemento */
+    overflow-y: auto;      /* Scroll si el contenido es más alto */
+    overflow-x: hidden;
   }
+  
   
   .modal-content {
     background-color: white;
