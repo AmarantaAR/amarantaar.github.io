@@ -1,11 +1,11 @@
-name: Deploy Amaranta Gallery
+name: Build Amaranta site
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  generate-env:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,13 +16,15 @@ jobs:
       run: |
         echo "{ \"GOOGLE_SCRIPT_URL\": \"${{ secrets.GOOGLE_SCRIPT_URL }}\" }" > env.json
 
-    - name: Verificar archivos
+    - name: Confirmar contenido
       run: |
-        echo "🗂 Archivos en la raíz:"
         ls -la
+        cat env.json
 
-    - name: Deploy a GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        personal_token: ${{ secrets.PERSONAL_TOKEN }}
-        publish_dir: .
+    - name: Subir archivo env.json al branch main
+      run: |
+        git config user.name "amaranta-bot"
+        git config user.email "actions@github.com"
+        git add env.json
+        git commit -m "build: generar env.json dinámicamente" || echo "No hay cambios"
+        git push
