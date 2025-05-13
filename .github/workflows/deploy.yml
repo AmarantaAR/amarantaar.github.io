@@ -19,4 +19,8 @@ jobs:
     - name: Verificar reemplazo
       run: grep "GOOGLE_SCRIPT_URL" script.js
 
-      
+    - name: Publicar en GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
+        publish_dir: .
