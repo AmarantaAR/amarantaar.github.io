@@ -17,10 +17,11 @@ jobs:
       with:
         node-version: '18'
 
-    - name: Crear env.json
+    - name: Crear env.json con secreto
       run: |
-        mkdir -p public
         echo "{ \"GOOGLE_SCRIPT_URL\": \"${{ secrets.GOOGLE_SCRIPT_URL }}\" }" > public/env.json
+        ls public
+    
 
     - name: Subir a GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
