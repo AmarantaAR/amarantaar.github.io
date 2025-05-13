@@ -1,3 +1,4 @@
+/* === Estilos principales === */
 body {
   margin: 0;
   font-family: 'Alice', serif;
@@ -22,16 +23,16 @@ body {
   min-height: 100vh;
   padding: 2rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
-  justify-content: center;
 }
 
 .artwork {
   background-color: #1a1a1a;
   padding: 1rem;
   border-radius: 10px;
-  max-width: 300px;
+  max-width: 700px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,8 +51,8 @@ body {
 }
 
 .artwork-images img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 4px;
   cursor: pointer;
@@ -115,4 +116,31 @@ body {
   max-height: 90vh;
   border-radius: 12px;
   box-shadow: 0 0 30px rgba(255,255,255,0.2);
+}
+
+/* Estilos para formulario dentro del modal */
+#purchase-form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#purchase-form input,
+#purchase-form button {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+#purchase-form button {
+  background: gold;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#purchase-form button:hover {
+  background: darkgoldenrod;
 }
