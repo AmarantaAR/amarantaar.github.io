@@ -12,13 +12,11 @@ jobs:
     - name: Clonar el repositorio
       uses: actions/checkout@v3
 
-    - name: Instalar dependencias para SOPS
-      run: sudo apt-get update && sudo apt-get install -y sops jq
-
-    - name: 🔐 Desencriptar y reemplazar la URL en script.js
+    - name: Reemplazar la URL directamente con el secreto
       run: |
-        URL=$(sops -d env.enc.json | jq -r '.GOOGLE_SCRIPT_URL')
-        sed -i "s|__INJECT_GOOGLE_SCRIPT_URL__|$URL|" script.js
+        sed -i "s|__INJECT_GOOGLE_SCRIPT_URL__|${{ secrets.GOOGLE_SCRIPT_URL }}|" script.js
 
-    - name: Verificar contenido final
-      run: grep GOOGLE_SCRIPT_URL script.js
+    - name: Verificar reemplazo
+      run: grep "GOOGLE_SCRIPT_URL" script.js
+
+      
