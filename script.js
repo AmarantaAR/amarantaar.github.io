@@ -14,43 +14,43 @@ function toggleMenu() {
 // }
 
 function openModal(title, description, images) {
-  document.getElementById('modal-title').innerText = title;
-  document.getElementById('modal-description').innerText = description;
-
   const modalContent = document.querySelector('.modal-content');
 
-  // Crear estructura Swiper para múltiples imágenes
   modalContent.innerHTML = `
-    <span class="modal-close" onclick="closeModal(event)">&times;</span>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        ${images.map(img => `
-          <div class="swiper-slide">
-            <img src="${img}" class="zoomable-image" style="width:100%; border-radius:6px;" />
-          </div>
-        `).join('')}
+    <div class="modal-gallery">
+      <span class="modal-close" onclick="closeModal(event)">&times;</span>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          ${images.map(img => `
+            <div class="swiper-slide">
+              <img src="${img}" class="zoomable-image"/>
+            </div>
+          `).join('')}
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
     </div>
-    <h3>${title}</h3>
-    <p>${description}</p>
-    <form id="purchase-form">
-      <input type="text" name="nombre" placeholder="Nombre completo" required>
-      <input type="email" name="correo" placeholder="Correo electrónico" required>
-      <input type="text" name="telefono" placeholder="Número de contacto (WhatsApp)" required>
-      <input type="text" name="instagram" placeholder="Instagram (opcional)">
-      <button type="submit">Solicitar compra</button>
-    </form>
+    <div class="modal-info">
+      <h3>${title}</h3>
+      <p>${description}</p>
+      <form id="purchase-form">
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
+        <input type="text" name="telefono" placeholder="Número de contacto (WhatsApp)" required>
+        <input type="text" name="instagram" placeholder="Instagram (opcional)">
+        <button type="submit">Solicitar compra</button>
+      </form>
+    </div>
   `;
 
-  // Mostrar modal
   document.getElementById('modal').style.display = 'flex';
 
-  // Inicializar Swiper
   const swiper = new Swiper('.swiper-container', {
     loop: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -61,7 +61,6 @@ function openModal(title, description, images) {
     },
   });
 
-  // Aplicar zoom en imágenes
   mediumZoom('.zoomable-image');
 }
 
@@ -70,6 +69,7 @@ function closeModal(event) {
     document.getElementById('modal').style.display = 'none';
   }
 }
+
 
 
 // 🔐 Esta variable será reemplazada automáticamente en build.sh con la URL real

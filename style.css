@@ -260,18 +260,53 @@ body {
   }
   
   .modal-content {
-    max-width: 800px; /* Un poco más grande para mejor visualización */
-    max-height: 90vh; /* Altura máxima respecto a la pantalla */
-    overflow-y: auto; /* Permite desplazamiento vertical si el contenido es grande */
-}
-
-.swiper-container {
-    width: 100%;
-    max-height: 60vh; /* Ajusta la altura máxima del carrusel */
-}
-
-.swiper-slide img {
+    display: flex;
+    flex-direction: row;
+    max-width: 90vw;
+    width: 90vw;
+    max-height: 90vh;
+    overflow: hidden;
+    padding: 0;
+  }
+  
+  .modal-gallery {
+    flex: 2;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .modal-info {
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+  }
+  
+  .swiper-container {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Esto mantiene las proporciones de la imagen */
-}
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: #a0182e;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
