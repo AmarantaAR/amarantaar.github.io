@@ -185,20 +185,20 @@ body {
   
   /* MODAL */
   .modal {
-    display: none;
-    position: fixed;       /* Siempre fijado en relación con la ventana */
+    display: none; /* 👈🏻 Sólo debe estar display:none al inicio */
+    position: fixed;       
     top: 0;
     left: 0;
-    width: 100vw;          /* 100% del ancho del viewport */
-    height: 100vh;         /* 100% del alto del viewport */
-    background-color: rgba(0,0,0,0.8);  /* Fondo semi-transparente oscuro */
-    display: flex;
-    justify-content: center;
+    width: 100vw;          
+    height: 100vh;         
+    background-color: rgba(0,0,0,0.8);  
+    justify-content: center;  /* flex se aplicará desde JS cuando sea necesario */
     align-items: center;
-    z-index: 2000;         /* Encima de cualquier otro elemento */
-    overflow-y: auto;      /* Scroll si el contenido es más alto */
+    z-index: 2000;        
+    overflow-y: auto;     
     overflow-x: hidden;
   }
+  
   
   
   .modal-content {
