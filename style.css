@@ -26,7 +26,7 @@ body {
   .toggle-button {
     position: fixed;
     top: 1rem;
-    left: 250px;
+    left: 1rem;
     background-color: #d4af37;
     border: none;
     padding: 0.5rem 1rem;
@@ -185,6 +185,7 @@ body {
   
   /* MODAL */
   .modal {
+    display: none;
     position: fixed;       /* Siempre fijado en relación con la ventana */
     top: 0;
     left: 0;
@@ -337,4 +338,25 @@ body {
     }
   }
   
+  /* Hiding menu bar for cell phone:*/
+  @media (max-width: 768px) {
+  nav {
+    transform: translateX(-100%);
+  }
+
+  nav.collapsed {
+    transform: translateX(0%);
+  }
+
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .toggle-button {
+    left: 1rem; /* Ajustamos posición del botón */
+    top: 1rem;
+  }
+}
+
   
