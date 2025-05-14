@@ -103,7 +103,7 @@ body {
   header {
     padding: 3rem 2rem 2rem 2rem;
     text-align: center;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: none;
   }
   
   header h1 {
