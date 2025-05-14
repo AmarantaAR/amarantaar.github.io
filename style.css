@@ -2,8 +2,8 @@ body {
     margin: 0;
     display: flex;
     font-family: 'Georgia', serif;
-    background-color: #ffffff;
-    color: #1a1a1a;
+    background-color: #000000;
+    color: #f0f0f0;
   }
   
   nav {
